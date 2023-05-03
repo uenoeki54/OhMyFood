@@ -98,9 +98,11 @@ header h1 {
           align-items: flex-start;
   gap: 25px;
   background: #FFFFFF;
-  padding: 48px 0px 40px 20px;
+  padding: 48px 0px 40px 0px;
 }
 .fonctionnement h2 {
+  position: relative;
+  left: 20px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -117,6 +119,10 @@ header h1 {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 24.92px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
 }
 .fonctionnement .boutons button {
   display: -webkit-box;
@@ -137,24 +143,6 @@ header h1 {
           box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
 }
-.fonctionnement .boutons button .circle {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  left: 15px;
-  top: 545px;
-  text-align: center;
-  border-width: 1px;
-  border-radius: 20px;
-  background-color: #9356DC;
-  color: white;
-}
-.fonctionnement .boutons button .circle--deux {
-  top: 645px;
-}
-.fonctionnement .boutons button .circle--trois {
-  top: 745px;
-}
 .fonctionnement .boutons button i {
   font-size: 1.5em;
   color: #7E7E7E;
@@ -169,6 +157,18 @@ header h1 {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+  width: 175.5px;
+}
+.fonctionnement .boutons button .circle {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  right: 277px;
+  text-align: center;
+  border-width: 1px;
+  border-radius: 20px;
+  background-color: #9356DC;
+  color: white;
 }
 
 .restaurants {
@@ -183,8 +183,8 @@ header h1 {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 25px;
-  background: darkgrey;
-  padding: 48px 0px 40px 20px;
+  background: #F3F3F3;
+  padding: 48px 20px 40px 20px;
 }
 .restaurants h2 {
   font-family: "Roboto";
@@ -193,4 +193,159 @@ header h1 {
   font-size: 24px;
   line-height: 28px;
   margin: 0px;
+}
+.restaurants .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.restaurants .row .card {
+  background: white;
+  border-radius: 20px;
+  height: 251px;
+  width: 346px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.restaurants .row .card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 167px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.restaurants .row .card .card-content {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 84px;
+}
+.restaurants .row .card .card-content .card-txt {
+  margin-top: auto;
+  margin-bottom: auto;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+  font-family: "Roboto";
+  font-style: normal;
+}
+.restaurants .row .card .card-content .card-txt .card-title {
+  margin: 0px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+}
+.restaurants .row .card .card-content .card-txt .card-subtitle {
+  margin: 0px;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 20px;
+}
+.restaurants .row .card .card-content .nouveau {
+  position: relative;
+  left: 56px;
+  bottom: 179px;
+  background: #99E2D0;
+  color: #008766;
+  padding: 7px 9px 7px 9px;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}
+.restaurants .row .card .card-content i {
+  font-size: 22px;
+}
+.restaurants .row .card .card-content .fa-gradient {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+footer {
+  background: #353535;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 25px;
+  padding-bottom: 22px;
+  gap: 5px;
+}
+footer h1 {
+  font-family: "Shrikhand";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+}
+footer a {
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+  color: white;
+}
+footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+footer div i {
+  width: 25px;
 }
