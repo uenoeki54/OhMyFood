@@ -1,11 +1,4 @@
 /* Variables */
-@keyframes button-heart {
-  100% {
-    color: transparent;
-    z-index: 2;
-    -webkit-text-stroke: 0.5px #9356DC;
-  }
-}
 body {
   background-color: #F3F3F3;
   margin: 0px;
@@ -241,17 +234,24 @@ header h1 {
   line-height: 16px;
   text-align: center;
 }
-.restaurants .row .card .card-content i {
+.restaurants .row .card .card-content .gradient {
   font-size: 21px;
   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
   background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 0.5px #9356DC;
+}
+.restaurants .row .card .card-content .white {
+  position: relative;
+  left: 21px;
+  font-size: 21px;
   color: white;
   -webkit-text-stroke: 0.5px black;
+  transition: opacity 1s;
 }
-.restaurants .row .card .card-content i:hover {
-  animation: button-heart 2s ease-in-out;
-  animation-fill-mode: both;
+.restaurants .row .card .card-content .white:hover {
+  opacity: 0;
 }
 
 footer {

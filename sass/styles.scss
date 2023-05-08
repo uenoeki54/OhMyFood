@@ -8,13 +8,7 @@ $verydarkgrey: #353535;
 $darkgreen: #008766;
 $lightgreen: #99E2D0;
 $gradient: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-@keyframes button-heart {
-    100% {
-      color:transparent;
-      z-index: 2;
-      -webkit-text-stroke: 0.5px #9356DC;
-    }
-  }
+
 
 
 body {
@@ -277,19 +271,28 @@ header {
                     text-align: center;
                 }
 
-                i {
+                .gradient{
                     font-size: 21px;
                     background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
                     -webkit-background-clip: text;
                     background-clip: text;
+                    color: transparent;
+                    -webkit-text-stroke: 0.5px #9356DC;
+                }
+                .white{
+                    position:relative;
+                    left:21px;
+                    font-size: 21px;
                     color: white;
                     -webkit-text-stroke: 0.5px black;
-                
-                &:hover {
-                    animation: button-heart 2s ease-in-out;
-                    animation-fill-mode:both;
-                  }
+                    transition: opacity 1s;
+                     &:hover {
+                        opacity:0;  
+                     }
                 }
+                
+                
+                
                
             }
         }
