@@ -16,8 +16,16 @@
 
 <body>
    <header>
+      <div class="header__content">
       <h1>ohmyfood</h1>
+      </div>
+      <div class="loader">
+         <span>Veuillez patienter pendant le chargement du contenu</span>
+        <div class="loader__bar"></div>
+      </div>
    </header>
+  
+   <div id="contenu">
    <section class="location">
       <i class="fa-solid fa-location-dot"></i>
       <p> Paris, Belleville</p>
@@ -62,7 +70,9 @@
                   <p class="card-subtitle">Charonne</p>
                </div> <!-- end div card-txt -->
                <span class="nouveau">Nouveau</span>
-               <i class="fa-solid fa-heart"></i>
+               <div>
+                  <i class="fa-solid fa-heart white"></i><i class="fa-solid fa-heart gradient"></i>
+                  </div>
             </div><!-- end div card-content-->
          </div> <!-- end div card-->
       </div> <!-- end div row -->
@@ -74,7 +84,9 @@
                   <h3 class="card-title">À la française </h3>
                   <p class="card-subtitle">Cité Rouge</p>
                </div> <!-- end div card-txt -->
-               <i class="fa-solid fa-heart"></i>
+               <div>
+                  <i class="fa-solid fa-heart white"></i><i class="fa-solid fa-heart gradient"></i>
+                  </div>
             </div><!-- end div card-content-->
          </div> <!-- end div card-->
          <div class="card">
@@ -84,7 +96,9 @@
                   <h3 class="card-title">Le délice des sens</h3>
                   <p class="card-subtitle">Folie-Méricourt</p>
                </div> <!-- end div card-txt -->
-               <i class="fa-solid fa-heart"></i>
+               <div>
+                  <i class="fa-solid fa-heart white"></i><i class="fa-solid fa-heart gradient"></i>
+                  </div>
             </div><!-- end div card-content-->
          </div> <!-- end div card-->
       </div>
@@ -96,6 +110,7 @@
      <a href="#">Mentions légales</a>
      <a href="#">Contact</a>
   </footer>
+</div><!-- end div contenu-->
 </body>
 
 </html>

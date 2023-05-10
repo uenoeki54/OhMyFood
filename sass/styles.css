@@ -1,25 +1,97 @@
 /* Variables */
+/* Keyframes */
+@keyframes load {
+  0% {
+    transform: scaleX(0);
+  }
+  96% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes header {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
 body {
   background-color: #F3F3F3;
   margin: 0px;
 }
-
-header {
+body header {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body header .header__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   height: 96px;
   background: white;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  animation: header 400ms 4100ms 1 normal ease-in-out both;
 }
-header h1 {
+body header .header__content h1 {
   font-family: Shrikhand;
   font-weight: 400;
   font-size: 30px;
   line-height: 43.74px;
   margin: auto;
 }
-
-.location {
+body header .loader {
+  width: 90%;
+  position: absolute;
+  top: 200px;
+  height: 70px;
+  padding: 5px;
+  border: solid 1px;
+  animation: disappear 0ms 4100ms 1 normal ease-in-out both;
+}
+body header .loader span {
+  position: absolute;
+  z-index: 1;
+  font-family: Shrikhand;
+  font-style: normal;
+  font-size: 1.5em;
+}
+body header .loader__bar {
+  background: linear-gradient(193.33deg, #99E2D0 -11.44%, #008766 123.93%);
+  width: 100%;
+  height: 100%;
+  animation: load 3s 100ms 1 normal ease-in-out backwards;
+  transform-origin: 0%;
+}
+body #contenu {
+  animation: appear 200ms 4500ms 1 normal backwards;
+}
+body #contenu .location {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,11 +99,11 @@ header h1 {
   height: 50px;
   background: #EAEAEA;
 }
-.location i,
-.location p {
+body #contenu .location i,
+body #contenu .location p {
   color: black;
 }
-.location p {
+body #contenu .location p {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -39,44 +111,65 @@ header h1 {
   line-height: 19px;
   margin-left: 17px;
 }
-
-.exploration {
+body #contenu .exploration {
   font-family: "Roboto";
   font-style: normal;
   text-align: center;
   padding: 30px 0px 60px 0px;
   width: 100%;
 }
-.exploration h2 {
+body #contenu .exploration h2 {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   width: 275px;
   margin: auto;
 }
-.exploration p {
+body #contenu .exploration p {
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
   line-height: 21px;
 }
-.exploration button {
+body #contenu .exploration button {
+  position: relative;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   border: 0px;
   width: 218px;
   height: 50px;
-}
-.exploration button span {
   color: white;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  margin: 13px;
+  /* Transition to showing the bigger shadow on hover */
+  /* Pre-render the bigger shadow, but hide it */
 }
-
-.fonctionnement {
+body #contenu .exploration button:hover::after {
+  opacity: 1;
+}
+body #contenu .exploration button::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(193.33deg, #9e67e0 -11.44%, #ff8de0 123.93%);
+  opacity: 0;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  transition: all 300ms ease-in-out;
+  z-index: 0;
+}
+body #contenu .exploration button span {
+  left: 20px;
+  top: 15px;
+  position: absolute;
+  z-index: 1;
+}
+body #contenu .fonctionnement {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -84,7 +177,7 @@ header h1 {
   background: #FFFFFF;
   padding: 48px 0px 40px 0px;
 }
-.fonctionnement h2 {
+body #contenu .fonctionnement h2 {
   position: relative;
   left: 20px;
   font-family: "Roboto";
@@ -94,14 +187,14 @@ header h1 {
   line-height: 28px;
   margin: 0px;
 }
-.fonctionnement .boutons {
+body #contenu .fonctionnement .boutons {
   display: flex;
   flex-direction: column;
   gap: 24.92px;
   align-items: center;
   width: 100%;
 }
-.fonctionnement .boutons button {
+body #contenu .fonctionnement .boutons button {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -113,15 +206,15 @@ header h1 {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
 }
-.fonctionnement .boutons button i {
+body #contenu .fonctionnement .boutons button i {
   font-size: 1.5em;
   color: #7E7E7E;
   width: 20px;
 }
-.fonctionnement .boutons button .fa-store {
+body #contenu .fonctionnement .boutons button .fa-store {
   color: #9356DC;
 }
-.fonctionnement .boutons button span {
+body #contenu .fonctionnement .boutons button span {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -129,7 +222,7 @@ header h1 {
   line-height: 19px;
   width: 175.5px;
 }
-.fonctionnement .boutons button .circle {
+body #contenu .fonctionnement .boutons button .circle {
   position: relative;
   width: 24px;
   height: 24px;
@@ -140,8 +233,7 @@ header h1 {
   background-color: #9356DC;
   color: white;
 }
-
-.restaurants {
+body #contenu .restaurants {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -149,7 +241,7 @@ header h1 {
   background: #F3F3F3;
   padding: 48px 20px 40px 20px;
 }
-.restaurants h2 {
+body #contenu .restaurants h2 {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -157,7 +249,7 @@ header h1 {
   line-height: 28px;
   margin: 0px;
 }
-.restaurants .row {
+body #contenu .restaurants .row {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -165,7 +257,7 @@ header h1 {
   width: 100%;
   margin-bottom: 5px;
 }
-.restaurants .row .card {
+body #contenu .restaurants .row .card {
   background: white;
   border-radius: 20px;
   height: 251px;
@@ -174,7 +266,7 @@ header h1 {
   display: flex;
   flex-direction: column;
 }
-.restaurants .row .card img {
+body #contenu .restaurants .row .card img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -182,7 +274,7 @@ header h1 {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.restaurants .row .card .card-content {
+body #contenu .restaurants .row .card .card-content {
   padding-left: 15px;
   padding-right: 15px;
   display: flex;
@@ -191,7 +283,7 @@ header h1 {
   align-items: center;
   height: 84px;
 }
-.restaurants .row .card .card-content .card-txt {
+body #contenu .restaurants .row .card .card-content .card-txt {
   margin-top: auto;
   margin-bottom: auto;
   height: -moz-min-content;
@@ -202,19 +294,19 @@ header h1 {
   font-family: "Roboto";
   font-style: normal;
 }
-.restaurants .row .card .card-content .card-txt .card-title {
+body #contenu .restaurants .row .card .card-content .card-txt .card-title {
   margin: 0px;
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
 }
-.restaurants .row .card .card-content .card-txt .card-subtitle {
+body #contenu .restaurants .row .card .card-content .card-txt .card-subtitle {
   margin: 0px;
   font-weight: 300;
   font-size: 17px;
   line-height: 20px;
 }
-.restaurants .row .card .card-content .nouveau {
+body #contenu .restaurants .row .card .card-content .nouveau {
   position: relative;
   left: 56px;
   bottom: 179px;
@@ -234,7 +326,7 @@ header h1 {
   line-height: 16px;
   text-align: center;
 }
-.restaurants .row .card .card-content .gradient {
+body #contenu .restaurants .row .card .card-content .gradient {
   font-size: 21px;
   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
@@ -242,7 +334,7 @@ header h1 {
   color: transparent;
   -webkit-text-stroke: 0.5px #9356DC;
 }
-.restaurants .row .card .card-content .white {
+body #contenu .restaurants .row .card .card-content .white {
   position: relative;
   left: 21px;
   font-size: 21px;
@@ -250,11 +342,10 @@ header h1 {
   -webkit-text-stroke: 0.5px black;
   transition: opacity 1s;
 }
-.restaurants .row .card .card-content .white:hover {
+body #contenu .restaurants .row .card .card-content .white:hover {
   opacity: 0;
 }
-
-footer {
+body #contenu footer {
   background: #353535;
   color: #FFFFFF;
   display: flex;
@@ -263,24 +354,24 @@ footer {
   padding-bottom: 22px;
   gap: 5px;
 }
-footer h1 {
+body #contenu footer h1 {
   font-family: "Shrikhand";
   font-style: italic;
   font-weight: 400;
   font-size: 18px;
   line-height: 26px;
 }
-footer a {
+body #contenu footer a {
   padding: 0px;
   margin: 0px;
   text-decoration: none;
   color: white;
 }
-footer div {
+body #contenu footer div {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-footer div i {
+body #contenu footer div i {
   width: 25px;
 }/*# sourceMappingURL=styles.css.map */
