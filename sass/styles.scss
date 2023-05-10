@@ -22,12 +22,22 @@ $disappear-delay: $load-delay + $load-time;
     0% {
         transform: scaleX(0);
     }
-
+    17% {
+        transform: scaleX(.18);
+    }
+    24% {
+        transform: scaleX(.4);
+    }
+    46% {
+        transform: scaleX(.81);
+    }
     96% {
+        transform: scaleX(.96);
         opacity: 1;
     }
 
     99% {
+        transform: scaleX(.99);
         opacity: 0;
     }
 

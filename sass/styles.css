@@ -4,10 +4,21 @@
   0% {
     transform: scaleX(0);
   }
+  17% {
+    transform: scaleX(0.18);
+  }
+  24% {
+    transform: scaleX(0.4);
+  }
+  46% {
+    transform: scaleX(0.81);
+  }
   96% {
+    transform: scaleX(0.96);
     opacity: 1;
   }
   99% {
+    transform: scaleX(0.99);
     opacity: 0;
   }
   100% {
