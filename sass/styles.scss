@@ -10,7 +10,7 @@ $lightgreen: #99E2D0;
 $gradient: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 $loader: linear-gradient(193.33deg, $lightgreen -11.44%, $darkgreen 123.93%);
 $load-delay: 100ms;
-$load-time: 4s;
+$load-time: 0s;
 $header-time: 400ms;
 $header-delay: $load-delay + $load-time;
 $contenu-delay: $load-delay + $load-time + $header-time;
@@ -22,15 +22,19 @@ $disappear-delay: $load-delay + $load-time;
     0% {
         transform: scaleX(0);
     }
+
     17% {
         transform: scaleX(.18);
     }
+
     24% {
         transform: scaleX(.4);
     }
+
     46% {
         transform: scaleX(.81);
     }
+
     96% {
         transform: scaleX(.96);
         opacity: 1;
@@ -192,7 +196,7 @@ body {
             }
 
             button {
-                position:relative;
+                position: relative;
                 background: linear-gradient(193.33deg, $primaire -11.44%, $secondaire 123.93%);
                 box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
                 border-radius: 25px;
@@ -204,34 +208,35 @@ body {
                 font-size: 16px;
                 line-height: 19px;
 
-            
-             /* Transition to showing the bigger shadow on hover */
-             &:hover::after {
-                opacity: 1;
-            }
 
-            /* Pre-render the bigger shadow, but hide it */
-            &::after {
-                content: "";
-                position:absolute;
-                left: 0px;
-                top:0px;
-                box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
-                background: linear-gradient(193.33deg, lighten($primaire,4) -11.44%, lighten($secondaire,4) 123.93%);
-                opacity: 0;
-                width: 218px;
-                height: 50px;
-                border-radius: 25px;
-                transition: all 300ms ease-in-out;
-                z-index: 0;
+                /* Transition to showing the bigger shadow on hover */
+                &:hover::after {
+                    opacity: 1;
+                }
+
+                /* Pre-render the bigger shadow, but hide it */
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+                    background: linear-gradient(193.33deg, lighten($primaire, 4) -11.44%, lighten($secondaire, 4) 123.93%);
+                    opacity: 0;
+                    width: 218px;
+                    height: 50px;
+                    border-radius: 25px;
+                    transition: all 300ms ease-in-out;
+                    z-index: 0;
+                }
+
+                span {
+                    left: 20px;
+                    top: 15px;
+                    position: absolute;
+                    z-index: 1;
+                }
             }
-            span{
-                left: 20px;
-                top:15px;
-                position:absolute;
-                z-index:1;
-            }
-        }
 
 
 
@@ -262,13 +267,16 @@ body {
 
 
             .boutons {
+                position:relative;
                 display: flex;
                 flex-direction: column;
                 gap: 24.92px;
                 align-items: center;
                 width: 100%;
+                
 
                 button {
+                    position:relative;
                     display: flex;
                     justify-content: center;
                     gap: 20px;
@@ -279,15 +287,34 @@ body {
                     background: #F7F7F7;
                     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
                     border-radius: 20px;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0px;
+                        top: 0px;
+                        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.20);
+                        opacity: 0;
+                        width: 322.49px;
+                        height: 72.38px;
+                        border-radius: 25px;
+                        transition: all 300ms ease-in-out;
+                        z-index: 0;
+                    }
+
+                    &:hover::after {
+                        opacity: 1;
+                    }
+                    &:hover {
+                        & i {
+                            color:$primaire;
+                        }
+                    }
 
                     i {
                         font-size: 1.5em;
                         color: #7E7E7E;
                         width: 20px;
-                    }
-
-                    .fa-store {
-                        color: $primaire;
+                        transition: color 500ms ease-in-out;
                     }
 
                     span {

@@ -67,7 +67,7 @@ body header .header__content {
   height: 96px;
   background: white;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  animation: header 400ms 4100ms 1 normal ease-in-out both;
+  animation: header 400ms 100ms 1 normal ease-in-out both;
 }
 body header .header__content h1 {
   font-family: Shrikhand;
@@ -83,7 +83,7 @@ body header .loader {
   height: 70px;
   padding: 5px;
   border: solid 1px;
-  animation: disappear 0ms 4100ms 1 normal ease-in-out both;
+  animation: disappear 0ms 100ms 1 normal ease-in-out both;
 }
 body header .loader span {
   position: absolute;
@@ -100,7 +100,7 @@ body header .loader__bar {
   transform-origin: 0%;
 }
 body #contenu {
-  animation: appear 200ms 4500ms 1 normal backwards;
+  animation: appear 200ms 500ms 1 normal backwards;
 }
 body #contenu .location {
   display: flex;
@@ -199,6 +199,7 @@ body #contenu .fonctionnement h2 {
   margin: 0px;
 }
 body #contenu .fonctionnement .boutons {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 24.92px;
@@ -206,6 +207,7 @@ body #contenu .fonctionnement .boutons {
   width: 100%;
 }
 body #contenu .fonctionnement .boutons button {
+  position: relative;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -217,13 +219,30 @@ body #contenu .fonctionnement .boutons button {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
 }
+body #contenu .fonctionnement .boutons button::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  width: 322.49px;
+  height: 72.38px;
+  border-radius: 25px;
+  transition: all 300ms ease-in-out;
+  z-index: 0;
+}
+body #contenu .fonctionnement .boutons button:hover::after {
+  opacity: 1;
+}
+body #contenu .fonctionnement .boutons button:hover i {
+  color: #9356DC;
+}
 body #contenu .fonctionnement .boutons button i {
   font-size: 1.5em;
   color: #7E7E7E;
   width: 20px;
-}
-body #contenu .fonctionnement .boutons button .fa-store {
-  color: #9356DC;
+  transition: color 500ms ease-in-out;
 }
 body #contenu .fonctionnement .boutons button span {
   font-family: "Roboto";
