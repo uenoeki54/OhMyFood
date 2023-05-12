@@ -1,0 +1,190 @@
+/* Variables */
+/* Keyframes */
+body {
+  width: 100%;
+  margin: 0px;
+  /* end header*/
+  /* end contenu*/
+}
+body header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body header .header__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 63px;
+  background: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  animation: header 400ms 100ms 1 normal ease-in-out both;
+}
+body header .header__content h1 {
+  font-family: Shrikhand;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 43.74px;
+  margin: auto;
+}
+body #contenu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 230px;
+  background-image: url("../assets/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-size: 100%;
+  margin-right: 0px;
+  margin-left: 0px;
+  /* end menu*/
+  /* end footer*/
+}
+body #contenu .menus {
+  padding: 30px 20px 20px 20px;
+  box-sizing: border-box; /* INDISPENSABLE POUR NE PAS QUE LE PADDING S AJOUTE A LA LARGEUR ET QUE CA DEPASSE*/
+  position: relative;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 40px 40px 0px 0px;
+  background: #EAEAEA;
+  /* end white*/
+  /* end articles*/
+}
+body #contenu .menus h2 {
+  position: relative;
+  font-family: Shrikhand;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 41px;
+  margin: auto;
+}
+body #contenu .menus .gradient {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  font-size: 21px;
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 0.5px #9356DC;
+  z-index: 0;
+}
+body #contenu .menus .white {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  font-size: 21px;
+  color: #EAEAEA;
+  -webkit-text-stroke: 0.5px black;
+  transition: opacity 1s;
+  z-index: 1;
+}
+body #contenu .menus .white:hover {
+  opacity: 0;
+}
+body #contenu .menus .articles {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+body #contenu .menus .articles article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+}
+body #contenu .menus .articles article h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+body #contenu .menus .articles article .line {
+  position: absolute;
+  top: 45px;
+  width: 40px;
+  height: 3px;
+  background: #99E2D0;
+}
+body #contenu .menus .articles article .item {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-content: baseline;
+  overflow: hidden;
+  width: 90%;
+  height: 40px;
+  background: #FFFFFF;
+  box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+  border-radius: 15.0431px;
+  padding: 12px 15px 12px 15px;
+}
+body #contenu .menus .articles article .item .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 5px;
+}
+body #contenu .menus .articles article .item .content h4 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0px;
+}
+body #contenu .menus .articles article .item .content p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15.0431px;
+  line-height: 18px;
+  margin: 0px;
+}
+body #contenu .menus .articles article .item .price {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+body #contenu footer {
+  width: 100%;
+  z-index: 4;
+  background: #353535;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+  padding-bottom: 22px;
+  box-sizing: border-box; /* INDISPENSABLE POUR NE PAS QUE LE PADDING S AJOUTE A LA LARGEUR ET QUE CA DEPASSE*/
+  gap: 5px;
+}
+body #contenu footer h1 {
+  font-family: "Shrikhand";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+}
+body #contenu footer a {
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+  color: white;
+}
+body #contenu footer div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+body #contenu footer div i {
+  width: 25px;
+}
+
+/* end body*//*# sourceMappingURL=restaurants.css.map */
