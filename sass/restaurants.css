@@ -185,8 +185,8 @@ body #contenu .menus .articles article .item .price .slider {
   background: #99E2D0;
   border-radius: 0px 15px 15px 0px;
   transform-origin: 100% 50%;
-  transform: scaleX(0);
-  transition: transform 500ms;
+  translate: 60px;
+  transition: translate 500ms;
 }
 body #contenu .menus .articles article .item .price .slider i {
   width: 20px;
@@ -195,7 +195,7 @@ body #contenu .menus .articles article .item .price .slider i {
   margin: 25px 15px 20px 20px;
 }
 body #contenu .menus .articles article .item:hover .slider {
-  transform: scaleX(1);
+  translate: 0px;
 }
 body #contenu .menus .articles article .item:hover .euros {
   translate: -60px;
