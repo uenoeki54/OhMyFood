@@ -43,7 +43,8 @@ body #contenu {
 }
 body #contenu .menus {
   padding: 30px 20px 20px 20px;
-  box-sizing: border-box; /* INDISPENSABLE POUR NE PAS QUE LE PADDING S AJOUTE A LA LARGEUR ET QUE CA DEPASSE*/
+  box-sizing: border-box;
+  /* INDISPENSABLE POUR NE PAS QUE LE PADDING S AJOUTE A LA LARGEUR ET QUE CA DEPASSE*/
   position: relative;
   width: 100%;
   height: -moz-fit-content;
@@ -115,18 +116,22 @@ body #contenu .menus .articles article .line {
 }
 body #contenu .menus .articles article .item {
   display: flex;
+  position: relative;
   justify-content: space-between;
   flex-direction: row;
   align-content: baseline;
   overflow: hidden;
-  width: 90%;
-  height: 40px;
+  width: 100%;
+  height: 69px;
   background: #FFFFFF;
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
   border-radius: 15.0431px;
-  padding: 12px 15px 12px 15px;
+  padding: 12px 0px 12px 15px;
+  box-sizing: border-box;
+  /* INDISPENSABLE POUR NE PAS QUE LE PADDING S AJOUTE A LA LARGEUR ET QUE CA DEPASSE*/
 }
 body #contenu .menus .articles article .item .content {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -149,9 +154,51 @@ body #contenu .menus .articles article .item .content p {
   margin: 0px;
 }
 body #contenu .menus .articles article .item .price {
+  position: absolute;
+  right: 0px;
+  top: 0px;
   display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-content: flex-end;
+}
+body #contenu .menus .articles article .item .price .euros {
+  display: flex;
+  position: absolute;
+  top: 35px;
   flex-direction: column;
   justify-content: end;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15.0431px;
+  line-height: 18px;
+  transition: all 500ms;
+}
+body #contenu .menus .articles article .item .price .euros span {
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+body #contenu .menus .articles article .item .price .slider {
+  width: 60px;
+  height: 69px;
+  background: #99E2D0;
+  border-radius: 0px 15px 15px 0px;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform 500ms;
+}
+body #contenu .menus .articles article .item .price .slider i {
+  width: 20px;
+  height: 20px;
+  color: white;
+  margin: 25px 15px 20px 20px;
+}
+body #contenu .menus .articles article .item:hover .slider {
+  transform: scaleX(1);
+}
+body #contenu .menus .articles article .item:hover .euros {
+  translate: -60px;
 }
 body #contenu footer {
   width: 100%;
@@ -162,7 +209,8 @@ body #contenu footer {
   flex-direction: column;
   padding-left: 25px;
   padding-bottom: 22px;
-  box-sizing: border-box; /* INDISPENSABLE POUR NE PAS QUE LE PADDING S AJOUTE A LA LARGEUR ET QUE CA DEPASSE*/
+  box-sizing: border-box;
+  /* INDISPENSABLE POUR NE PAS QUE LE PADDING S AJOUTE A LA LARGEUR ET QUE CA DEPASSE*/
   gap: 5px;
 }
 body #contenu footer h1 {
