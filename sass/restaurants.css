@@ -1,5 +1,15 @@
 /* Variables */
 /* Keyframes */
+@keyframes apparition {
+  0% {
+    transform: translate(0px, -50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
 body {
   width: 100%;
   margin: 0px;
@@ -98,6 +108,7 @@ body #contenu .menus .articles article {
   flex-direction: column;
   justify-content: space-between;
   gap: 15px;
+  animation: apparition 400ms 100ms 1 normal ease-in-out both;
 }
 body #contenu .menus .articles article h3 {
   font-family: "Roboto";
@@ -199,6 +210,15 @@ body #contenu .menus .articles article .item:hover .slider {
 }
 body #contenu .menus .articles article .item:hover .euros {
   translate: -60px;
+}
+body #contenu .menus .articles #entrees {
+  animation-delay: 100ms;
+}
+body #contenu .menus .articles #plats {
+  animation-delay: 500ms;
+}
+body #contenu .menus .articles #desserts {
+  animation-delay: 1s;
 }
 body #contenu footer {
   width: 100%;

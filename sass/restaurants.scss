@@ -17,7 +17,17 @@ $contenu-delay: $load-delay + $load-time + $header-time;
 $disappear-delay: $load-delay + $load-time;
 
 /* Keyframes */
+@keyframes apparition {
+    0% {
+        transform: translate(0px, -50px);
+        opacity: 0;
+    }
 
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
 
 
 
@@ -126,6 +136,7 @@ body {
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
+                
 
                 article {
                     position: relative;
@@ -133,7 +144,7 @@ body {
                     flex-direction: column;
                     justify-content: space-between;
                     gap: 15px;
-
+                    animation: apparition 400ms 100ms 1 normal ease-in-out both;
 
                     h3 {
                         font-family: 'Roboto';
@@ -205,7 +216,7 @@ body {
 
                             .euros {
                                 display: flex;
-                                position:absolute;
+                                position: absolute;
                                 top: 35px;
                                 flex-direction: column;
                                 justify-content: end;
@@ -219,7 +230,7 @@ body {
                                 span {
                                     margin-bottom: 10px;
                                     margin-right: 10px;
-                                    
+
                                 }
                             }
 
@@ -240,15 +251,29 @@ body {
                                 }
                             }
 
-                            
+
                         }
+
                         &:hover .slider {
                             translate: 0px;
                         }
+
                         &:hover .euros {
                             translate: -60px;
                         }
                     }
+                }
+
+                #entrees {
+                    animation-delay: 100ms;
+                }
+
+                #plats {
+                    animation-delay: 500ms;
+                }
+
+                #desserts {
+                    animation-delay: 1s;
                 }
             }
 
