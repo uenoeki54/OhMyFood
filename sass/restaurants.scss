@@ -16,6 +16,7 @@ $header-delay: $load-delay + $load-time;
 $contenu-delay: $load-delay + $load-time + $header-time;
 $disappear-delay: $load-delay + $load-time;
 
+
 /* Keyframes */
 @keyframes apparition {
     0% {
@@ -48,8 +49,9 @@ body {
             align-items: center;
             height: 63px;
             background: white;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
             animation: header $header-time $header-delay 1 normal ease-in-out both;
+            text-decoration: none;
+            color: #353535;
 
 
             h1 {
@@ -73,7 +75,7 @@ body {
         display: flex;
         flex-direction: column;
         width: 100%;
-        padding-top: 230px;
+        padding-top: 200px;
         background-image: url("../assets/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
         background-size: 100%;
         margin-right: 0px;
@@ -90,44 +92,54 @@ body {
             border-radius: 40px 40px 0px 0px;
             background: #EAEAEA;
 
-            h2 {
+            .etablissement {
                 position: relative;
-                font-family: Shrikhand;
-                font-weight: 400;
-                font-size: 28px;
-                line-height: 41px;
-                margin: auto;
-            }
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
 
-            .gradient {
-                position: absolute;
-                right: 40px;
-                top: 40px;
-                font-size: 21px;
-                background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;
-                -webkit-text-stroke: 0.5px #9356DC;
-                z-index: 0;
-            }
 
-            .white {
-                position: absolute;
-                right: 40px;
-                top: 40px;
-                font-size: 21px;
-                color: #EAEAEA;
-                ;
-                -webkit-text-stroke: 0.5px black;
-                transition: opacity 1s;
-                z-index: 1;
+                h2 {
+                    position: relative;
+                    font-family: Shrikhand;
+                    font-weight: 400;
+                    font-size: 28px;
+                    line-height: 41px;
+                    margin: 0px;
 
-                &:hover {
-                    opacity: 0;
                 }
 
+                .heart {
+                    position: relative;
+                    margin-right: 15px;
 
+                    .gradient {
+                        position: absolute;
+                        top: 7px;
+                        font-size: 21px;
+                        background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        -webkit-text-stroke: 0.5px #9356DC;
+                        z-index: 0;
+                    }
+
+
+                    .white {
+                        position: absolute;
+                        top: 7px;
+                        font-size: 21px;
+                        color: #EAEAEA;
+                        -webkit-text-stroke: 0.5px black;
+                        transition: opacity 1s;
+                        z-index: 1;
+
+                        &:hover {
+                            opacity: 0;
+                        }
+                    }
+                }
 
             }
 
@@ -136,7 +148,7 @@ body {
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
-                
+
 
                 article {
                     position: relative;
@@ -177,13 +189,14 @@ body {
                         border-radius: 15.0431px;
                         padding: 12px 0px 12px 15px;
                         box-sizing: border-box;
+                        gap: 10px;
                         /* INDISPENSABLE POUR NE PAS QUE LE PADDING S AJOUTE A LA LARGEUR ET QUE CA DEPASSE*/
 
                         .content {
-                            position: relative;
                             display: flex;
                             flex-direction: column;
                             justify-content: space-evenly;
+                            width: 80%;
                             gap: 5px;
 
                             h4 {
@@ -193,6 +206,9 @@ body {
                                 font-size: 18px;
                                 line-height: 21px;
                                 margin: 0px;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
                             }
 
                             p {
@@ -202,6 +218,9 @@ body {
                                 font-size: 15.0431px;
                                 line-height: 18px;
                                 margin: 0px;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
                             }
                         }
 
@@ -215,7 +234,7 @@ body {
                             align-content: flex-end;
 
                             .euros {
-                                display: flex;
+                                display: block;
                                 position: absolute;
                                 top: 35px;
                                 flex-direction: column;
@@ -240,8 +259,8 @@ body {
                                 background: #99E2D0;
                                 border-radius: 0px 15px 15px 0px;
                                 transform-origin: 100% 50%;
-                                translate: 60px;
-                                transition: translate 500ms;
+                                transform: translate(60px);
+                                transition: transform 500ms;
 
                                 i {
                                     width: 20px;
@@ -255,11 +274,15 @@ body {
                         }
 
                         &:hover .slider {
-                            translate: 0px;
+                            transform: translate(0px);
                         }
 
                         &:hover .euros {
-                            translate: -60px;
+                            transform: translate(-60px);
+                        }
+
+                        &:hover .content {
+                            width: 220px;
                         }
                     }
                 }
@@ -274,6 +297,50 @@ body {
 
                 #desserts {
                     animation-delay: 1s;
+                }
+
+                button {
+                    position: relative;
+                    background: linear-gradient(193.33deg, $primaire -11.44%, $secondaire 123.93%);
+                    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+                    border-radius: 25px;
+                    border: 0px;
+                    width: 218px;
+                    height: 50px;
+                    color: white;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 19px;
+                    align-self: center;
+
+
+                    /* Transition to showing the bigger shadow on hover */
+                    &:hover::after {
+                        opacity: 1;
+                    }
+
+                    /* Pre-render the bigger shadow, but hide it */
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0px;
+                        top: 0px;
+                        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+                        background: linear-gradient(193.33deg, lighten($primaire, 4) -11.44%, lighten($secondaire, 4) 123.93%);
+                        opacity: 0;
+                        width: 218px;
+                        height: 50px;
+                        border-radius: 25px;
+                        transition: all 300ms ease-in-out;
+                        z-index: 0;
+                    }
+
+                    span {
+                        left: 65px;
+                        top: 15px;
+                        position: absolute;
+                        z-index: 1;
+                    }
                 }
             }
 
@@ -338,3 +405,42 @@ body {
 }
 
 /* end body*/
+
+@media (max-width: 281px) {
+    $content-width: 100px!important;
+    #contenu {
+        padding-top: 150px !important;
+
+        .menus {
+
+            h2 {
+                font-size: 20px !important;
+
+            }
+            item:hover .content {
+                width: 50px!important;
+            }
+        }
+    }
+}
+
+@media (min-width: 767.98px) {
+
+
+    .content {
+
+        h4 {
+
+            text-overflow: clip !important;
+            /* c est pour arreter le delire avec les trois poinst et le rognage du texte des menus */
+            overflow: visible !important;
+        }
+
+        p {
+            text-overflow: clip !important;
+            overflow: visible !important;
+        }
+    }
+}
+
+/* end media*/

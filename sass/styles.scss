@@ -10,7 +10,7 @@ $lightgreen: #99E2D0;
 $gradient: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 $loader: linear-gradient(193.33deg, $lightgreen -11.44%, $darkgreen 123.93%);
 $load-delay: 100ms;
-$load-time: 0s;
+$load-time: 3s;
 $header-time: 400ms;
 $header-delay: $load-delay + $load-time;
 $contenu-delay: $load-delay + $load-time + $header-time;
@@ -124,6 +124,7 @@ body {
             top: 200px;
             height: 70px;
             padding: 5px;
+            box-sizing: border-box;
             border: solid 1px;
             animation: disappear 0ms $disappear-delay 1 normal ease-in-out both;
 
@@ -132,7 +133,7 @@ body {
                 z-index: 1;
                 font-family: Shrikhand;
                 font-style: normal;
-                font-size: 1.5em;
+                font-size: 1.2em;
             }
 
             &__bar {
@@ -375,6 +376,8 @@ body {
                     margin: auto;
                     display: flex;
                     flex-direction: column;
+                    text-decoration: none;
+                    color:black;
 
 
 

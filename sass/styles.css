@@ -67,7 +67,7 @@ body header .header__content {
   height: 63px;
   background: white;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  animation: header 400ms 100ms 1 normal ease-in-out both;
+  animation: header 400ms 3100ms 1 normal ease-in-out both;
 }
 body header .header__content h1 {
   font-family: Shrikhand;
@@ -82,15 +82,16 @@ body header .loader {
   top: 200px;
   height: 70px;
   padding: 5px;
+  box-sizing: border-box;
   border: solid 1px;
-  animation: disappear 0ms 100ms 1 normal ease-in-out both;
+  animation: disappear 0ms 3100ms 1 normal ease-in-out both;
 }
 body header .loader span {
   position: absolute;
   z-index: 1;
   font-family: Shrikhand;
   font-style: normal;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 body header .loader__bar {
   background: linear-gradient(193.33deg, #99E2D0 -11.44%, #008766 123.93%);
@@ -100,7 +101,7 @@ body header .loader__bar {
   transform-origin: 0%;
 }
 body #contenu {
-  animation: appear 200ms 500ms 1 normal backwards;
+  animation: appear 200ms 3500ms 1 normal backwards;
 }
 body #contenu .location {
   display: flex;
@@ -295,6 +296,8 @@ body #contenu .restaurants .row .card {
   margin: auto;
   display: flex;
   flex-direction: column;
+  text-decoration: none;
+  color: black;
 }
 body #contenu .restaurants .row .card img {
   -o-object-fit: cover;

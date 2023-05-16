@@ -28,8 +28,9 @@ body header .header__content {
   align-items: center;
   height: 63px;
   background: white;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   animation: header 400ms 100ms 1 normal ease-in-out both;
+  text-decoration: none;
+  color: #353535;
 }
 body header .header__content h1 {
   font-family: Shrikhand;
@@ -43,7 +44,7 @@ body #contenu {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-top: 230px;
+  padding-top: 200px;
   background-image: url("../assets/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   background-size: 100%;
   margin-right: 0px;
@@ -64,18 +65,27 @@ body #contenu .menus {
   /* end white*/
   /* end articles*/
 }
-body #contenu .menus h2 {
+body #contenu .menus .etablissement {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+body #contenu .menus .etablissement h2 {
   position: relative;
   font-family: Shrikhand;
   font-weight: 400;
   font-size: 28px;
   line-height: 41px;
-  margin: auto;
+  margin: 0px;
 }
-body #contenu .menus .gradient {
+body #contenu .menus .etablissement .heart {
+  position: relative;
+  margin-right: 15px;
+}
+body #contenu .menus .etablissement .heart .gradient {
   position: absolute;
-  right: 40px;
-  top: 40px;
+  top: 7px;
   font-size: 21px;
   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
@@ -84,17 +94,16 @@ body #contenu .menus .gradient {
   -webkit-text-stroke: 0.5px #9356DC;
   z-index: 0;
 }
-body #contenu .menus .white {
+body #contenu .menus .etablissement .heart .white {
   position: absolute;
-  right: 40px;
-  top: 40px;
+  top: 7px;
   font-size: 21px;
   color: #EAEAEA;
   -webkit-text-stroke: 0.5px black;
   transition: opacity 1s;
   z-index: 1;
 }
-body #contenu .menus .white:hover {
+body #contenu .menus .etablissement .heart .white:hover {
   opacity: 0;
 }
 body #contenu .menus .articles {
@@ -139,13 +148,14 @@ body #contenu .menus .articles article .item {
   border-radius: 15.0431px;
   padding: 12px 0px 12px 15px;
   box-sizing: border-box;
+  gap: 10px;
   /* INDISPENSABLE POUR NE PAS QUE LE PADDING S AJOUTE A LA LARGEUR ET QUE CA DEPASSE*/
 }
 body #contenu .menus .articles article .item .content {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  width: 80%;
   gap: 5px;
 }
 body #contenu .menus .articles article .item .content h4 {
@@ -155,6 +165,9 @@ body #contenu .menus .articles article .item .content h4 {
   font-size: 18px;
   line-height: 21px;
   margin: 0px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 body #contenu .menus .articles article .item .content p {
   font-family: "Roboto";
@@ -163,6 +176,9 @@ body #contenu .menus .articles article .item .content p {
   font-size: 15.0431px;
   line-height: 18px;
   margin: 0px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 body #contenu .menus .articles article .item .price {
   position: absolute;
@@ -174,7 +190,7 @@ body #contenu .menus .articles article .item .price {
   align-content: flex-end;
 }
 body #contenu .menus .articles article .item .price .euros {
-  display: flex;
+  display: block;
   position: absolute;
   top: 35px;
   flex-direction: column;
@@ -196,8 +212,8 @@ body #contenu .menus .articles article .item .price .slider {
   background: #99E2D0;
   border-radius: 0px 15px 15px 0px;
   transform-origin: 100% 50%;
-  translate: 60px;
-  transition: translate 500ms;
+  transform: translate(60px);
+  transition: transform 500ms;
 }
 body #contenu .menus .articles article .item .price .slider i {
   width: 20px;
@@ -206,10 +222,13 @@ body #contenu .menus .articles article .item .price .slider i {
   margin: 25px 15px 20px 20px;
 }
 body #contenu .menus .articles article .item:hover .slider {
-  translate: 0px;
+  transform: translate(0px);
 }
 body #contenu .menus .articles article .item:hover .euros {
-  translate: -60px;
+  transform: translate(-60px);
+}
+body #contenu .menus .articles article .item:hover .content {
+  width: 220px;
 }
 body #contenu .menus .articles #entrees {
   animation-delay: 100ms;
@@ -219,6 +238,45 @@ body #contenu .menus .articles #plats {
 }
 body #contenu .menus .articles #desserts {
   animation-delay: 1s;
+}
+body #contenu .menus .articles button {
+  position: relative;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  border: 0px;
+  width: 218px;
+  height: 50px;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  align-self: center;
+  /* Transition to showing the bigger shadow on hover */
+  /* Pre-render the bigger shadow, but hide it */
+}
+body #contenu .menus .articles button:hover::after {
+  opacity: 1;
+}
+body #contenu .menus .articles button::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(193.33deg, #9e67e0 -11.44%, #ff8de0 123.93%);
+  opacity: 0;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  transition: all 300ms ease-in-out;
+  z-index: 0;
+}
+body #contenu .menus .articles button span {
+  left: 65px;
+  top: 15px;
+  position: absolute;
+  z-index: 1;
 }
 body #contenu footer {
   width: 100%;
@@ -255,4 +313,27 @@ body #contenu footer div i {
   width: 25px;
 }
 
-/* end body*//*# sourceMappingURL=restaurants.css.map */
+/* end body*/
+@media (max-width: 281px) {
+  #contenu {
+    padding-top: 150px !important;
+  }
+  #contenu .menus h2 {
+    font-size: 20px !important;
+  }
+  #contenu .menus item:hover .content {
+    width: 50px !important;
+  }
+}
+@media (min-width: 767.98px) {
+  .content h4 {
+    text-overflow: clip !important;
+    /* c est pour arreter le delire avec les trois poinst et le rognage du texte des menus */
+    overflow: visible !important;
+  }
+  .content p {
+    text-overflow: clip !important;
+    overflow: visible !important;
+  }
+}
+/* end media*//*# sourceMappingURL=restaurants.css.map */
