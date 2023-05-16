@@ -8,9 +8,9 @@ $verydarkgrey: #353535;
 $darkgreen: #008766;
 $lightgreen: #99E2D0;
 $gradient: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-$loader: linear-gradient(193.33deg, $lightgreen -11.44%, $darkgreen 123.93%);
+$loader: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 $load-delay: 100ms;
-$load-time: 3s;
+$load-time: 4s;
 $header-time: 400ms;
 $header-delay: $load-delay + $load-time;
 $contenu-delay: $load-delay + $load-time + $header-time;
@@ -21,6 +21,7 @@ $disappear-delay: $load-delay + $load-time;
 @keyframes load {
     0% {
         transform: scaleX(0);
+        
     }
 
     17% {
@@ -125,11 +126,11 @@ body {
             height: 70px;
             padding: 5px;
             box-sizing: border-box;
-            border: solid 1px;
             animation: disappear 0ms $disappear-delay 1 normal ease-in-out both;
 
             span {
                 position: absolute;
+                top:-50px;
                 z-index: 1;
                 font-family: Shrikhand;
                 font-style: normal;
@@ -143,6 +144,21 @@ body {
                 animation: load 3s $load-delay 1 normal ease-in-out backwards;
                 transform-origin: 0%;
             }
+
+            table {
+                position: absolute;
+                width:100%;
+                height: 100%;
+                top:0px;
+                bottom:0px;
+                border: 1px solid;
+                border-color: $lightgrey;
+                th {
+                    width:2.5%;
+                    border: 1px solid;
+                    border-color: $lightgrey;
+                }
+              }
         }
     }
 
