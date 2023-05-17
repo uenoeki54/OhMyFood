@@ -1,39 +1,31 @@
 /* Variables */
 /* Keyframes */
+/* Petites barres de chargement qui apparaisent avec un delai animation reutilisee 10 fois*/
 @keyframes load {
-  0% {
-    transform: scaleX(0);
-  }
-  17% {
-    transform: scaleX(0.18);
-  }
-  24% {
-    transform: scaleX(0.4);
-  }
-  46% {
-    transform: scaleX(0.81);
-  }
-  96% {
-    transform: scaleX(0.96);
-    opacity: 1;
-  }
-  99% {
-    transform: scaleX(0.99);
+  from {
+    transform: scaleY(0);
     opacity: 0;
+    rotate: -90deg;
   }
-  100% {
-    transform: scaleX(1);
+  to {
+    transform: scaleY(1);
     opacity: 1;
+    rotate: 0deg;
   }
 }
-@keyframes appear {
+/* petit clignotement old-school de la barre*/
+@keyframes flash {
   0% {
+    opacity: 1;
+  }
+  50% {
     opacity: 0;
   }
   100% {
     opacity: 1;
   }
 }
+/* Juste pour effacer le loader*/
 @keyframes disappear {
   0% {
     opacity: 1;
@@ -42,12 +34,22 @@
     opacity: 0;
   }
 }
+/* apparition du header*/
 @keyframes header {
   0% {
     transform: scaleX(0);
   }
   100% {
     transform: scaleX(1);
+  }
+}
+/* apparition du contenu de la page legerement decaler*/
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 body {
@@ -67,7 +69,7 @@ body header .header__content {
   height: 63px;
   background: white;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  animation: header 400ms 4100ms 1 normal ease-in-out both;
+  animation: header 400ms 3000ms 1 normal ease-in-out both;
 }
 body header .header__content h1 {
   font-family: Shrikhand;
@@ -78,12 +80,12 @@ body header .header__content h1 {
 }
 body header .loader {
   width: 90%;
-  position: absolute;
+  position: relative;
   top: 200px;
   height: 70px;
   padding: 5px;
   box-sizing: border-box;
-  animation: disappear 0ms 4100ms 1 normal ease-in-out both;
+  animation: disappear 0ms 3000ms 1 normal ease-in-out both;
 }
 body header .loader span {
   position: absolute;
@@ -94,11 +96,50 @@ body header .loader span {
   font-size: 1.2em;
 }
 body header .loader__bar {
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  width: 100%;
+  display: flex;
+  width: 350px;
   height: 100%;
-  animation: load 3s 100ms 1 normal ease-in-out backwards;
-  transform-origin: 0%;
+  margin: auto;
+  justify-content: space-between;
+  gap: 2px;
+  animation: flash 100ms 2800ms ease-in-out forwards;
+}
+body header .loader__bar .bar {
+  width: 10%;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  border-radius: 10px;
+  animation: load 200ms normal ease-in-out both;
+  transform-origin: bottom center;
+}
+body header .loader__bar .bar--1 {
+  animation-delay: 100ms;
+}
+body header .loader__bar .bar--2 {
+  animation-delay: 400ms;
+}
+body header .loader__bar .bar--3 {
+  animation-delay: 900ms;
+}
+body header .loader__bar .bar--4 {
+  animation-delay: 1200ms;
+}
+body header .loader__bar .bar--5 {
+  animation-delay: 1500ms;
+}
+body header .loader__bar .bar--6 {
+  animation-delay: 2400ms;
+}
+body header .loader__bar .bar--7 {
+  animation-delay: 2500ms;
+}
+body header .loader__bar .bar--8 {
+  animation-delay: 2600ms;
+}
+body header .loader__bar .bar--9 {
+  animation-delay: 2700ms;
+}
+body header .loader__bar .bar--10 {
+  animation-delay: 2750ms;
 }
 body header .loader table {
   position: absolute;
@@ -115,7 +156,7 @@ body header .loader table th {
   border-color: #F3F3F3;
 }
 body #contenu {
-  animation: appear 200ms 4500ms 1 normal backwards;
+  animation: appear 200ms 3400ms 1 normal backwards;
 }
 body #contenu .location {
   display: flex;
