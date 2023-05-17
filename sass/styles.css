@@ -454,6 +454,11 @@ body #contenu footer h1 {
   line-height: 26px;
 }
 body #contenu footer a {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
   padding: 0px;
   margin: 0px;
   text-decoration: none;
