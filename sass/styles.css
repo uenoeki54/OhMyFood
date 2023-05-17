@@ -81,7 +81,8 @@ body header .header__content h1 {
 }
 body header .loader {
   width: 90%;
-  position: relative;
+  position: absolute;
+  top: 150px;
   height: 70px;
   padding: 5px;
   box-sizing: border-box;
@@ -90,7 +91,7 @@ body header .loader {
 }
 body header .loader span {
   position: absolute;
-  top: -60px;
+  top: -100px;
   z-index: 1;
   font-family: Shrikhand;
   font-style: normal;
@@ -141,20 +142,6 @@ body header .loader__bar .bar--9 {
 }
 body header .loader__bar .bar--10 {
   animation-delay: 2750ms;
-}
-body header .loader table {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  bottom: 0px;
-  border: 1px solid;
-  border-color: #F3F3F3;
-}
-body header .loader table th {
-  width: 2.5%;
-  border: 1px solid;
-  border-color: #F3F3F3;
 }
 body #contenu {
   animation: appear 200ms 3400ms 1 normal backwards;
@@ -458,7 +445,13 @@ body #contenu footer h1 {
   font-size: 18px;
   line-height: 26px;
 }
-body #contenu footer a {
+body #contenu footer .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+}
+body #contenu footer .links a {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -469,11 +462,69 @@ body #contenu footer a {
   text-decoration: none;
   color: white;
 }
-body #contenu footer div {
+body #contenu footer .links div {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-body #contenu footer div i {
+body #contenu footer .links div i {
   width: 25px;
+}
+
+/* ----------------------MEDIA QUERY POUR DESKTOP------------------------------ */
+@media (min-width: 1024px) {
+  .loader {
+    height: 300px !important;
+    padding: 5px;
+    box-sizing: border-box;
+    border: solid 1px #353535;
+    animation: disappear 0ms 3000ms 1 normal ease-in-out both;
+  }
+  .loader span {
+    position: absolute;
+    top: -60px;
+    z-index: 1;
+    font-family: Shrikhand;
+    font-style: normal;
+    font-size: 3em !important;
+  }
+  .exploration h2 {
+    width: 100% !important;
+    font-weight: 700 !important;
+    font-size: 40px !important;
+    line-height: 47px !important;
+  }
+  .fonctionnement {
+    padding-left: 15% !important;
+  }
+  .fonctionnement h2 {
+    left: 0px !important;
+  }
+  .fonctionnement .boutons {
+    flex-direction: row !important;
+  }
+  .restaurants {
+    padding-left: 15% !important;
+    padding-right: 15% !important;
+  }
+  .restaurants .row {
+    flex-direction: row !important;
+  }
+  footer {
+    padding-bottom: 10px !important;
+    padding-top: 50px;
+    flex-direction: row-reverse !important;
+    gap: 10px;
+  }
+  footer h1 {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  footer .links {
+    flex-direction: row !important;
+    align-items: center;
+  }
+  footer .links .space {
+    width: 30px;
+  }
 }/*# sourceMappingURL=styles.css.map */

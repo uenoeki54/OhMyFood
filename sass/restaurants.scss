@@ -362,6 +362,11 @@ body {
             box-sizing: border-box;
             /* INDISPENSABLE POUR NE PAS QUE LE PADDING S AJOUTE A LA LARGEUR ET QUE CA DEPASSE*/
             gap: 5px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
 
             h1 {
                 font-family: 'Shrikhand';
@@ -372,23 +377,33 @@ body {
 
             }
 
-            a {
-                padding: 0px;
-                margin: 0px;
-                text-decoration: none;
-                color: white;
-            }
+            .links {
+                display:flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 5px;
+                a {
+                    padding: 0px;
+                    margin: 0px;
+                    text-decoration: none;
+                    color: white;
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 19px;
+                }
 
-            div {
-                display: flex;
-                align-items: center;
-                gap: 10px;
+                div {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
 
-                i {
-                    width: 25px;
+                    i {
+                        width: 25px;
+                    }
                 }
             }
-
         }
 
         /* end footer*/
@@ -407,7 +422,8 @@ body {
 /* end body*/
 
 @media (max-width: 281px) {
-    $content-width: 100px!important;
+    $content-width: 100px !important;
+
     #contenu {
         padding-top: 150px !important;
 
@@ -417,8 +433,9 @@ body {
                 font-size: 20px !important;
 
             }
+
             item:hover .content {
-                width: 50px!important;
+                width: 50px !important;
             }
         }
     }
@@ -439,6 +456,52 @@ body {
         p {
             text-overflow: clip !important;
             overflow: visible !important;
+        }
+    }
+}
+
+@media (min-width: 811px) {
+    #contenu {
+        background-image: url(../assets/palette-desktop-bg.jpg) !important;
+        background-repeat: no-repeat;
+        background-size: contain !important;
+        background-position: top;
+        padding-top: 400px !important;
+
+        .menus {
+            width: 66.6% !important;
+            margin: auto;
+            padding-left: 15% !important;
+            padding-right: 15% !important;
+
+            .etablissement {
+                margin: auto;
+                width: max-content !important;
+                justify-content: center;
+                gap: 10px !important;
+            }
+
+        }
+
+        footer {
+            padding-bottom: 10px !important;
+            padding-top: 50px;
+            flex-direction: row-reverse !important;
+            gap:10px;
+
+            h1 {
+                margin-left: 60px;
+                margin-right: 60px;
+            }
+            .links {
+            flex-direction: row!important;
+            align-items: center;
+            .space {
+                width: 30px;
+            }
+        }
+
+            
         }
     }
 }
