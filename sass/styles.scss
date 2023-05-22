@@ -22,7 +22,7 @@ $disappear-delay: $load-delay + $load-time;
     from {
         transform: scaleY(0);
         opacity: 0;
-        rotate: (-90deg);
+        transform: rotate(-90deg);
     }
 
 
@@ -30,7 +30,7 @@ $disappear-delay: $load-delay + $load-time;
     to {
         transform: scaleY(1);
         opacity: 1;
-        rotate: (0deg);
+        transform: rotate(0deg);
     }
 
 }
