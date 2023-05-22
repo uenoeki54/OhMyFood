@@ -428,6 +428,7 @@ body {
                 margin-bottom: 5px;
 
                 .card {
+                    position: relative;
                     background: white;
                     border-radius: 20px;
                     height: 251px;
@@ -438,7 +439,24 @@ body {
                     text-decoration: none;
                     color: black;
 
-
+                    .nouveau {
+                        position: absolute;
+                        right: 20px;
+                        top: 20px;
+                        background: $lightgreen;
+                        color: $darkgreen;
+                        padding: 7px 9px 7px 9px;
+                        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+                        border-radius: 2px;
+                        width: fit-content;
+                        height: fit-content;
+                        font-family: 'Roboto';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 16px;
+                        text-align: center;
+                    }
 
                     img {
                         object-fit: cover;
@@ -449,6 +467,7 @@ body {
                     }
 
                     .card-content {
+                        position: relative;
                         padding-left: 15px;
                         padding-right: 15px;
                         box-sizing: border-box;
@@ -483,24 +502,7 @@ body {
                             }
                         }
 
-                        .nouveau {
-                            position: relative;
-                            left: 56px;
-                            bottom: 179px;
-                            background: $lightgreen;
-                            color: $darkgreen;
-                            padding: 7px 9px 7px 9px;
-                            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-                            border-radius: 2px;
-                            width: fit-content;
-                            height: fit-content;
-                            font-family: 'Roboto';
-                            font-style: normal;
-                            font-weight: 500;
-                            font-size: 14px;
-                            line-height: 16px;
-                            text-align: center;
-                        }
+                        
 
                         .gradient {
                             font-size: 21px;

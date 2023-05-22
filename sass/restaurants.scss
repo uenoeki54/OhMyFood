@@ -15,6 +15,7 @@ $header-time: 400ms;
 $header-delay: $load-delay + $load-time;
 $contenu-delay: $load-delay + $load-time + $header-time;
 $disappear-delay: $load-delay + $load-time;
+$content-width: 60%;
 
 
 /* Keyframes */
@@ -282,7 +283,7 @@ body {
                         }
 
                         &:hover .content {
-                            width: 220px;
+                            width: $content-width;
                         }
                     }
                 }
@@ -378,10 +379,11 @@ body {
             }
 
             .links {
-                display:flex;
+                display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 gap: 5px;
+
                 a {
                     padding: 0px;
                     margin: 0px;
@@ -422,22 +424,12 @@ body {
 /* end body*/
 
 @media (max-width: 281px) {
-    $content-width: 100px !important;
+    $content-width: 50px !important;
 
     #contenu {
         padding-top: 150px !important;
 
-        .menus {
-
-            h2 {
-                font-size: 20px !important;
-
-            }
-
-            item:hover .content {
-                width: 50px !important;
-            }
-        }
+       
     }
 }
 
@@ -487,21 +479,23 @@ body {
             padding-bottom: 10px !important;
             padding-top: 50px;
             flex-direction: row-reverse !important;
-            gap:10px;
+            gap: 10px;
 
             h1 {
                 margin-left: 60px;
                 margin-right: 60px;
             }
-            .links {
-            flex-direction: row!important;
-            align-items: center;
-            .space {
-                width: 30px;
-            }
-        }
 
-            
+            .links {
+                flex-direction: row !important;
+                align-items: center;
+
+                .space {
+                    width: 30px;
+                }
+            }
+
+
         }
     }
 }

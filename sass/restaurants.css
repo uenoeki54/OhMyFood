@@ -228,7 +228,7 @@ body #contenu .menus .articles article .item:hover .euros {
   transform: translate(-60px);
 }
 body #contenu .menus .articles article .item:hover .content {
-  width: 220px;
+  width: 60%;
 }
 body #contenu .menus .articles #entrees {
   animation-delay: 100ms;
@@ -333,12 +333,6 @@ body #contenu footer .links div i {
 @media (max-width: 281px) {
   #contenu {
     padding-top: 150px !important;
-  }
-  #contenu .menus h2 {
-    font-size: 20px !important;
-  }
-  #contenu .menus item:hover .content {
-    width: 50px !important;
   }
 }
 @media (min-width: 767.98px) {

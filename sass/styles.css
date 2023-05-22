@@ -333,6 +333,7 @@ body #contenu .restaurants .row {
   margin-bottom: 5px;
 }
 body #contenu .restaurants .row .card {
+  position: relative;
   background: white;
   border-radius: 20px;
   height: 251px;
@@ -343,6 +344,26 @@ body #contenu .restaurants .row .card {
   text-decoration: none;
   color: black;
 }
+body #contenu .restaurants .row .card .nouveau {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: #99E2D0;
+  color: #008766;
+  padding: 7px 9px 7px 9px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}
 body #contenu .restaurants .row .card img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -352,6 +373,7 @@ body #contenu .restaurants .row .card img {
   border-top-right-radius: 20px;
 }
 body #contenu .restaurants .row .card .card-content {
+  position: relative;
   padding-left: 15px;
   padding-right: 15px;
   box-sizing: border-box;
@@ -383,26 +405,6 @@ body #contenu .restaurants .row .card .card-content .card-txt .card-subtitle {
   font-weight: 300;
   font-size: 17px;
   line-height: 20px;
-}
-body #contenu .restaurants .row .card .card-content .nouveau {
-  position: relative;
-  left: 56px;
-  bottom: 179px;
-  background: #99E2D0;
-  color: #008766;
-  padding: 7px 9px 7px 9px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 2px;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
 }
 body #contenu .restaurants .row .card .card-content .gradient {
   font-size: 21px;
