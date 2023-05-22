@@ -1,0 +1,390 @@
+/* Variables */
+/* Keyframes */
+@keyframes apparition {
+  0% {
+    transform: translate(0px, -50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+body {
+  width: 100%;
+  margin: 0px;
+  /* end header*/
+  /* end contenu*/
+}
+body header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body header .header__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 63px;
+  background: white;
+  animation: header 400ms 100ms 1 normal ease-in-out both;
+  text-decoration: none;
+  color: #353535;
+}
+body header .header__content h1 {
+  font-family: Shrikhand;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 43.74px;
+  margin: auto;
+}
+body #contenu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 200px;
+  background-image: url("../assets/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-size: 100%;
+  margin-right: 0px;
+  margin-left: 0px;
+  /* end menu*/
+  /* end footer*/
+}
+body #contenu .menus {
+  padding: 30px 20px 20px 20px;
+  box-sizing: border-box;
+  /* INDISPENSABLE POUR NE PAS QUE LE PADDING S AJOUTE A LA LARGEUR ET QUE CA DEPASSE*/
+  position: relative;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 40px 40px 0px 0px;
+  background: #EAEAEA;
+  /* end white*/
+  /* end articles*/
+}
+body #contenu .menus .etablissement {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+body #contenu .menus .etablissement h2 {
+  position: relative;
+  font-family: Shrikhand;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 41px;
+  margin: 0px;
+}
+body #contenu .menus .etablissement .heart {
+  position: relative;
+  margin-right: 15px;
+}
+body #contenu .menus .etablissement .heart .gradient {
+  position: absolute;
+  top: 7px;
+  font-size: 21px;
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 0.5px #9356DC;
+  z-index: 0;
+}
+body #contenu .menus .etablissement .heart .white {
+  position: absolute;
+  top: 7px;
+  font-size: 21px;
+  color: #EAEAEA;
+  -webkit-text-stroke: 0.5px black;
+  transition: opacity 1s;
+  z-index: 1;
+}
+body #contenu .menus .etablissement .heart .white:hover {
+  opacity: 0;
+}
+body #contenu .menus .articles {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+body #contenu .menus .articles article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  animation: apparition 400ms 100ms 1 normal ease-in-out both;
+}
+body #contenu .menus .articles article h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+body #contenu .menus .articles article .line {
+  position: absolute;
+  top: 45px;
+  width: 40px;
+  height: 3px;
+  background: #99E2D0;
+}
+body #contenu .menus .articles article .item {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  flex-direction: row;
+  align-content: baseline;
+  overflow: hidden;
+  width: 100%;
+  height: 69px;
+  background: #FFFFFF;
+  box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+  border-radius: 15.0431px;
+  padding: 12px 0px 12px 15px;
+  box-sizing: border-box;
+  gap: 10px;
+  /* INDISPENSABLE POUR NE PAS QUE LE PADDING S AJOUTE A LA LARGEUR ET QUE CA DEPASSE*/
+}
+body #contenu .menus .articles article .item .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 80%;
+  gap: 5px;
+}
+body #contenu .menus .articles article .item .content h4 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+body #contenu .menus .articles article .item .content p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15.0431px;
+  line-height: 18px;
+  margin: 0px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+body #contenu .menus .articles article .item .price {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-content: flex-end;
+}
+body #contenu .menus .articles article .item .price .euros {
+  display: block;
+  position: absolute;
+  top: 35px;
+  flex-direction: column;
+  justify-content: end;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15.0431px;
+  line-height: 18px;
+  transition: all 500ms;
+}
+body #contenu .menus .articles article .item .price .euros span {
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+body #contenu .menus .articles article .item .price .slider {
+  width: 60px;
+  height: 69px;
+  background: #99E2D0;
+  border-radius: 0px 15px 15px 0px;
+  transform-origin: 100% 50%;
+  transform: translate(60px);
+  transition: transform 500ms;
+}
+body #contenu .menus .articles article .item .price .slider i {
+  width: 20px;
+  height: 20px;
+  color: white;
+  margin: 25px 15px 20px 20px;
+}
+body #contenu .menus .articles article .item:hover .slider {
+  transform: translate(0px);
+}
+body #contenu .menus .articles article .item:hover .euros {
+  transform: translate(-60px);
+}
+body #contenu .menus .articles article .item:hover .content {
+  width: 60%;
+}
+body #contenu .menus .articles #entrees {
+  animation-delay: 100ms;
+}
+body #contenu .menus .articles #plats {
+  animation-delay: 500ms;
+}
+body #contenu .menus .articles #desserts {
+  animation-delay: 1s;
+}
+body #contenu .menus .articles button {
+  position: relative;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  border: 0px;
+  width: 218px;
+  height: 50px;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  align-self: center;
+  /* Transition to showing the bigger shadow on hover */
+  /* Pre-render the bigger shadow, but hide it */
+}
+body #contenu .menus .articles button:hover::after {
+  opacity: 1;
+}
+body #contenu .menus .articles button::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(193.33deg, #9e67e0 -11.44%, #ff8de0 123.93%);
+  opacity: 0;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  transition: all 300ms ease-in-out;
+  z-index: 0;
+}
+body #contenu .menus .articles button span {
+  left: 65px;
+  top: 15px;
+  position: absolute;
+  z-index: 1;
+}
+body #contenu footer {
+  width: 100%;
+  z-index: 4;
+  background: #353535;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+  padding-bottom: 22px;
+  box-sizing: border-box;
+  /* INDISPENSABLE POUR NE PAS QUE LE PADDING S AJOUTE A LA LARGEUR ET QUE CA DEPASSE*/
+  gap: 5px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+body #contenu footer h1 {
+  font-family: "Shrikhand";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+}
+body #contenu footer .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+}
+body #contenu footer .links a {
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+  color: white;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+body #contenu footer .links div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+body #contenu footer .links div i {
+  width: 25px;
+}
+
+/* end body*/
+@media (max-width: 281px) {
+  #contenu {
+    padding-top: 150px !important;
+  }
+}
+@media (min-width: 767.98px) {
+  .content h4 {
+    text-overflow: clip !important;
+    /* c est pour arreter le delire avec les trois poinst et le rognage du texte des menus */
+    overflow: visible !important;
+  }
+  .content p {
+    text-overflow: clip !important;
+    overflow: visible !important;
+  }
+  #contenu {
+    background-image: url(../assets/note-desktop-bg.jpg) !important;
+  }
+}
+@media (min-width: 811px) {
+  #contenu {
+    background-repeat: no-repeat;
+    background-size: contain !important;
+    background-position: top;
+    padding-top: 400px !important;
+  }
+  #contenu .menus {
+    width: 66.6% !important;
+    margin: auto;
+    padding-left: 15% !important;
+    padding-right: 15% !important;
+  }
+  #contenu .menus .etablissement {
+    margin: auto;
+    width: -moz-max-content !important;
+    width: max-content !important;
+    justify-content: center;
+    gap: 10px !important;
+  }
+  #contenu footer {
+    padding-bottom: 10px !important;
+    padding-top: 50px;
+    flex-direction: row-reverse !important;
+    gap: 10px;
+  }
+  #contenu footer h1 {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  #contenu footer .links {
+    flex-direction: row !important;
+    align-items: center;
+  }
+  #contenu footer .links .space {
+    width: 30px;
+  }
+}
+/* end media*//*# sourceMappingURL=note.css.map */
