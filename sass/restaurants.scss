@@ -424,18 +424,20 @@ body {
 /* end body*/
 
 @media (max-width: 281px) {
-    $content-width: 50px !important;
+    $content-width: 45px !important;
+
+    h2 {
+        font-size: 20px!important;
+    }
 
     #contenu {
         padding-top: 150px !important;
 
-       
+
     }
 }
 
 @media (min-width: 767.98px) {
-
-
     .content {
 
         h4 {
