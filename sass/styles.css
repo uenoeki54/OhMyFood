@@ -473,7 +473,30 @@ body #contenu footer .links div i {
   width: 25px;
 }
 
-/* ----------------------MEDIA QUERY POUR DESKTOP------------------------------ */
+/* ----------------------MEDIA QUERIES------------------------------ */
+/* ----------------------MEDIA QUERY FOR SAMSUNG FOLD------------------------------ */
+@media (max-width: 281px) {
+  .boutons button {
+    padding-left: 25px;
+    width: 240px !important;
+    box-sizing: border-box;
+  }
+  .boutons button::after {
+    width: 240px !important;
+  }
+  .boutons button .circle {
+    right: 224px !important;
+    font-size: 10px !important;
+    height: 19px !important;
+  }
+  .restaurants .card {
+    height: 191px !important;
+  }
+  .restaurants .card img {
+    height: 123px !important;
+  }
+}
+/* ----------------------MEDIA QUERY FOR DESKTOP------------------------------ */
 @media (min-width: 1024px) {
   .loader {
     height: 300px !important;
