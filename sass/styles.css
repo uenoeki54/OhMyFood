@@ -5,12 +5,12 @@
   from {
     transform: scaleY(0);
     opacity: 0;
-    rotate: -25deg;
+    transform: rotate(-25deg);
   }
   to {
     transform: scaleY(1);
     opacity: 1;
-    rotate: 0deg;
+    transform: rotate(0);
   }
 }
 /* petit clignotement old-school de la barre*/
@@ -288,7 +288,7 @@ body #contenu .fonctionnement .boutons button i {
   width: 20px;
   transition: color 500ms ease-in-out;
 }
-body #contenu .fonctionnement .boutons button span {
+body #contenu .fonctionnement .boutons button .text {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -306,6 +306,10 @@ body #contenu .fonctionnement .boutons button .circle {
   border-radius: 20px;
   background-color: #9356DC;
   color: white;
+}
+body #contenu .fonctionnement .boutons button .circle .number {
+  position: relative;
+  top: 5px;
 }
 body #contenu .restaurants {
   display: flex;

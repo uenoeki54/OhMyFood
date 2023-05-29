@@ -22,7 +22,7 @@ $disappear-delay: $load-delay + $load-time;
     from {
         transform: scaleY(0);
         opacity: 0;
-        rotate: (-25deg);
+        transform: rotate(-25deg);
     }
 
 
@@ -30,7 +30,7 @@ $disappear-delay: $load-delay + $load-time;
     to {
         transform: scaleY(1);
         opacity: 1;
-        rotate: (0deg);
+        transform: rotate(0);
     }
 
 }
@@ -376,7 +376,7 @@ body {
                         transition: color 500ms ease-in-out;
                     }
 
-                    span {
+                    .text {
                         font-family: 'Roboto';
                         font-style: normal;
                         font-weight: 500;
@@ -395,8 +395,12 @@ body {
                         border-radius: 20px;
                         background-color: $primaire;
                         color: white;
-
+                        .number {
+                            position:relative;
+                            top:5px;
+                        }
                     }
+                    
                 }
             }
         }
