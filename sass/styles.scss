@@ -666,13 +666,13 @@ body {
     }
 
     .fonctionnement {
-        padding-left: 15% !important;
-        padding-right: 15% !important;
+        padding-left: 25% !important;
+        padding-right: 25% !important;
         box-sizing: border-box;
         width: 100% !important;
 
         h2 {
-            left: 186px !important;
+            left: 0px !important;
         }
 
         .boutons {
@@ -684,13 +684,9 @@ body {
     }
 
     .restaurants {
-        padding-left: 15% !important;
-        padding-right: 15% !important;
+        padding-left: 25% !important;
+        padding-right: 25% !important;
 
-        h2 {
-            position:relative;
-            left: 186px !important;
-        }
 
         .row {
             flex-direction: row !important;
