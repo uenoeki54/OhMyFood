@@ -395,12 +395,13 @@ body {
                         border-radius: 20px;
                         background-color: $primaire;
                         color: white;
+
                         .number {
-                            position:relative;
-                            top:5px;
+                            position: relative;
+                            top: 5px;
                         }
                     }
-                    
+
                 }
             }
         }
@@ -666,13 +667,19 @@ body {
 
     .fonctionnement {
         padding-left: 15% !important;
+        padding-right: 15% !important;
+        box-sizing: border-box;
+        width: 100% !important;
 
         h2 {
-            left: 0px !important;
+            left: 186px !important;
         }
 
         .boutons {
+            width: 100% !important;
             flex-direction: row !important;
+            justify-content: center !important;
+            gap: 35px !important;
         }
     }
 
@@ -680,9 +687,19 @@ body {
         padding-left: 15% !important;
         padding-right: 15% !important;
 
+        h2 {
+            position:relative;
+            left: 186px !important;
+        }
+
         .row {
             flex-direction: row !important;
+            justify-content: center !important;
 
+            .card {
+                width: 498.65px !important;
+                margin: 0% !important;
+            }
         }
     }
 

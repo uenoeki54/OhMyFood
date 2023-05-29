@@ -525,19 +525,34 @@ body #contenu footer .links div i {
   }
   .fonctionnement {
     padding-left: 15% !important;
+    padding-right: 15% !important;
+    box-sizing: border-box;
+    width: 100% !important;
   }
   .fonctionnement h2 {
-    left: 0px !important;
+    left: 186px !important;
   }
   .fonctionnement .boutons {
+    width: 100% !important;
     flex-direction: row !important;
+    justify-content: center !important;
+    gap: 35px !important;
   }
   .restaurants {
     padding-left: 15% !important;
     padding-right: 15% !important;
   }
+  .restaurants h2 {
+    position: relative;
+    left: 186px !important;
+  }
   .restaurants .row {
     flex-direction: row !important;
+    justify-content: center !important;
+  }
+  .restaurants .row .card {
+    width: 498.65px !important;
+    margin: 0% !important;
   }
   footer {
     padding-bottom: 10px !important;
